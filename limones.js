@@ -103,3 +103,12 @@ function aparecerLimon() {
     limonY = 0;
     actualizarPantalla();
 }
+
+function reiniciar() {
+    vidas = 3;
+    puntaje = 0;
+    VelocidadCaida = 200;
+    mostrarEnSpan("txtPuntaje", puntaje);
+    mostrarEnSpan("txtVidas", vidas);
+    iniciar();
+}
