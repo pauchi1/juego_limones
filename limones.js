@@ -14,9 +14,10 @@ let limonY = 0;
 let puntaje = 0;
 let vidas = 3;
 let VelocidadCaida = 200;
+let intervalo;
 
 function iniciar() {
-    setInterval(bajarLimon, VelocidadCaida);//primer parametro: una funcion como tal, segundo parametro: tiempo en milisegundos
+    intervalo = setInterval(bajarLimon,VelocidadCaida)//primer parametro: una funcion como tal, segundo parametro: tiempo en milisegundos
     dibujarSuelo();
     dibujarPersonaje();
     dibujarLimon();
@@ -80,6 +81,7 @@ function detectarAtrapado() {
             VelocidadCaida = 100;
         } else if (puntaje == 10) {
             alert("YA TIENES PARA HACER LA LIMONADA, AHORA BUSCA EL AZUCAR PARA LA LIMONTODO!!!");
+            clearInterval(intervalo);
         }
     }
 }
@@ -91,6 +93,7 @@ function detectarPiso() {
         mostrarEnSpan("txtVidas", vidas);
         if (vidas == 0){
             alert("GAME OVER");
+            clearInterval(intervalo);
         }
     }
 }
