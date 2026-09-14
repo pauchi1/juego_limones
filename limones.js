@@ -51,6 +51,16 @@ function moverDerecha() {
     actualizarPantalla();
 }
 
+function moverArriba() {
+    personajeY = personajeY - 10;
+    actualizarPantalla();
+}
+
+function moverAbajo() {
+    personajeY = personajeY + 10;
+    actualizarPantalla();
+}
+
 function limpiarcanva() {
     ctx.clearRect(0,0,canvas.width,canvas.height);
 }
@@ -112,3 +122,4 @@ function reiniciar() {
     mostrarEnSpan("txtVidas", vidas);
     iniciar();
 }
+
