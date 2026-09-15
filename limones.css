@@ -12,6 +12,31 @@ padding: 30px 15px;
 min-height: 100vh;
 }
 
+.logo {
+width: 200px;
+height: 200px;
+
+display: block;
+margin: 0 auto 20px;
+
+object-fit: contain;
+image-rendering: pixelated;
+
+border: 5px solid #f5d000;
+background: #111111;
+
+box-shadow:
+7px 7px 0 #000000,
+0 0 20px rgba(245, 208, 0, 0.8);
+
+transition: transform 0.2s ease;
+}
+
+.logo:hover {
+transform: scale(1.05);
+}
+
+
 /* CONTENEDOR PRINCIPAL */
 
 .contenedor {
