@@ -114,5 +114,6 @@ function reiniciar() {
 }
 
 function desaparecerPersonaje() {
-    clearRect(personajeX, personajeY, ANCHO_PERSONAJE, ALTURA_PERSONAJE);
+    ctx.clearRect(personajeX, personajeY, ALTURA_PERSONAJE, ANCHO_PERSONAJE);
+    console.log("boton funcionando");
 }
